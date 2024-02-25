@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:shamo/theme.dart';
 import 'package:shamo/widgets/chat_bubble.dart';
 
@@ -76,27 +75,25 @@ class DetailChatPage extends StatelessWidget {
               children: [
                 Expanded(
                   child: Container(
-                    padding: EdgeInsets.symmetric(
-                      horizontal: 16,
-                    ),
                     decoration: BoxDecoration(
                       color: backgroundColor4,
                       borderRadius: BorderRadius.circular(12),
                     ),
-                    child: Center(
-                      child: Expanded(
-                        child: TextField(
-                          keyboardType: TextInputType.multiline,
-                          minLines: 1,
-                          maxLines: 5,
-                          style: primaryTextStyle,
-                          decoration: InputDecoration(
-                            isDense: true,
-                            contentPadding: EdgeInsets.symmetric(vertical: 11),
-                            hintText: 'Type Message...',
-                            hintStyle: subtitleTextStyle,
-                            border: InputBorder.none,
+                    child: Expanded(
+                      child: TextField(
+                        keyboardType: TextInputType.multiline,
+                        minLines: 1,
+                        maxLines: 5,
+                        style: primaryTextStyle,
+                        decoration: InputDecoration(
+                          isDense: true,
+                          contentPadding: EdgeInsets.symmetric(
+                            vertical: 11,
+                            horizontal: 16,
                           ),
+                          hintText: 'Type Message...',
+                          hintStyle: subtitleTextStyle,
+                          border: InputBorder.none,
                         ),
                       ),
                     ),
