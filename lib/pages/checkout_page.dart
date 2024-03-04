@@ -275,7 +275,10 @@ class CheckoutPage extends StatelessWidget {
         child: Container(
           margin: EdgeInsets.all(defaultMargin),
           child: TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamedAndRemoveUntil(
+                  context, '/checkout-success', (route) => false);
+            },
             style: TextButton.styleFrom(
               backgroundColor: primaryColor,
               shape: RoundedRectangleBorder(
